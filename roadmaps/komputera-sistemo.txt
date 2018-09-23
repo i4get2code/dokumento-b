@@ -2,7 +2,7 @@
 arch ;; simplicity
 nixos ;; server maintainability
 
-;; priotiy ii
+;; priority ii
 void
 slackware ;; simplicity
 
