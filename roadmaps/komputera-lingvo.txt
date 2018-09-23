@@ -2,6 +2,7 @@
 rule of thumb
 =============
 
+functional languages need to have higher kined types (hkt)
 synergy
 whitespace sensitive imperative (wssi)
 whitespace sensitive functional (wssf)
@@ -13,17 +14,14 @@ iot
 null-safety
 metaprogramming
 
-;; either pure functional (fp) or
-;; not primarily functional (nfp)
-;; nfp examples:
-scala, kotlin, nim, python
-;; fp examples
-idris, purescript
+;; hkt examples
+scala, haskell, idris, purescript
 
 ;; synergy examples:
-nim python scala purescript
 scala -> jvm, javascript | c <- scala-native
 nim -> c, c++, objective-c, javascript
+scala-native haskell
+kotlin-native haskell
 
 ;; wssi examples:
 python nim | lobster || coffescript
@@ -32,7 +30,7 @@ python nim | lobster || coffescript
 idris purescript | livescript elm
 
 ;; mobile examples:
-idris scala kotlin | python || lux clojure haxe
+scala kotlin | python idris || lux clojure haxe
 
 ;; ll examples:
 nim
@@ -48,22 +46,23 @@ nim | scala kotlin || red julia
 nim python
 
 ;; null-safe examples:
-idris scala | kotlin || erlang julia elixir ceylon
+scala | kotlin idris || erlang julia elixir ceylon
 
 ;; metaprogramming examples:
 nim | elixir julia lisp red
 
-==
+==/
 
-;; homoiconic languages are unreadable
-;; and only suited for ir
-;; examples:
-malfunction, lux
-;; contra-examples:
-hy/lang, spry, min, clojure
-red, lux, scheme, common lisp, julia
+;; homoiconic languages have a few fatal flows (imho)
+;; difficult to read and understand because of extreme simplicity.
+;; simplicity that is hard despite uniform, minimal and logical syntax.
+;; or maybe because of that.
+;; the living proof that easy and simple are not the same
+;; maybe vulnerable to injection
+;; homoiconic examples:
+any lisp, any rebol, julia
 
-=
+=/
 
 ;; VERY IMPORTANT
 ;; think very carefully if you are willing to write code in this language
@@ -89,6 +88,18 @@ python
 ;; OBJECT-FUNCTIONAL
 ;; ANDROID
 scala
+;;
+;; 23.500 stars
+;; no ats
+;; there is no ir like in nim so llvm and jvm are separate.
+;; no ir that can be fed to different backends
+;; nullability as a speical case
+;; is low-high
+;; llvm, java, javascript backends
+;; android
+kotlin
+;;
+java
 
 ;; 5.000 stars
 ;; best low-level
@@ -102,22 +113,14 @@ scala
 ;; conjuction with haskell
 nim
 
-;; 23.500 stars
-;; no ats
-;; there is no ir like in nim so llvm and jvm are separate.
-;; no ir that can be fed to different backends
-;; nullability as a speical case
-;; is low-high
-;; llvm, java, javascript backends
-;; android
-kotlin
-;;
-java
-
 ======
 tier 2
 ======
 
+;; optional braces as delimiters.
+;; thankfully not generally used.
+;; conjuction with nim
+;; will keep me liking nim
 ;; much better than c, c++, javascript
 ;; laziness is awesome
 haskell
@@ -134,13 +137,20 @@ idris
 
 ;; readable js
 ;; backend friendly
-;; write purescript to nim backend
-;; instead of elm
+;; write nim backend
 purescript
 
 =================
 under supervision
 =================
+
+;; 30.000 stars
+;; teaches to program
+;; flagman of ownership/borrowing
+;; null-safe
+;; webassembly
+;; NO METAPROGRAMMING
+rust dyon gluon (1)
 
 ============
 practicality
@@ -149,46 +159,35 @@ stability
 check
 ============
 
-======================
-work with and basics 1
-======================
+================
+learn the basics
+================
 
 ;; it's a minimal language
-javascript (python, nim, idris)
+javascript (scala, kotlin, python, nim, idris)
 c++ (nim)
 
-java (nim, idris)
+java (kotlin, scala, nim, idris)
 csharp (idris)
 
 c (nim)
-
-======================
-work with and basics 2
-======================
 
 ========
 research
 ========
 
-;; it's like go/lang
-;; no abstractions.
-;; and insane amount of boilerplate
-elm
-
-;; optional braces as delimiters.
-;; thankfully not generally used.
-;; will keep me liking nim
-;; for purescript and idris
-;; conjuction with nim
-haskell
+;; off-side rules
+moonscript
+lua
 
 lobster
 
 livescript
 
-;; for scripting
-moonscript
-lua
+;; it's like go/lang
+;; no abstractions.
+;; and insane amount of boilerplate
+elm
 
 coffeescript
 
@@ -216,9 +215,9 @@ gimp
 coreutils
 rebol
 
-============
-not to learn
-============
+=========
+provizejo
+==========
 
 ;; 1.000 stars
 ;; ANDROID
@@ -261,14 +260,6 @@ julia
 
 ;; 400 stars
 mercury
-
-;; 30.000 stars
-;; teaches to program
-;; flagman of ownership/borrowing
-;; null-safe
-;; webassembly
-;; NO METAPROGRAMMING
-rust ketos macro-lisp dyon gluon (1)
 
 ;; host language is not homoiconic.
 ;; and that is one of my demands
