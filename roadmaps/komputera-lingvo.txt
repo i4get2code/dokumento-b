@@ -18,38 +18,42 @@ metaprogramming
 scala, haskell, idris, purescript
 
 ;; synergy examples:
-scala -> jvm, javascript | c <- scala-native
-nim -> c, c++, objective-c, javascript
-scala-native haskell
-kotlin-native haskell
+scala-native haskell rust kotlin-native
+haskell idris purescript
+scala kotlin java
+;;
+scala -> jvm javascript | c <- scala-native
+rust == gluon dyon -> c 
+scala-native == kotlin-native == nim
+nim -> c c++ objective-c javascript
 
 ;; wssi examples:
-python nim | lobster || coffescript
+nim python | lobster moonscript || coffescript
 
 ;; wssf examples:
-idris purescript | livescript elm
+haskell idris purescript | livescript || elm
 
 ;; mobile examples:
-scala kotlin | python idris || lux clojure haxe
+scala kotlin | idris python || lux clojure haxe
 
 ;; ll examples:
-nim
+rust | nim || dlang
 
 ;; transpiler examples:
-nim idris | purescript || lux haxe
+idris | purescript || nim ||| lux haxe
 
 ;; low-high means that the language is convenient as dynamically-typed languages are
 ;; low-high examples:
-nim | scala kotlin || red julia 
+scala kotlin | nim || red julia 
 
 ;; iot examples:
-nim python
+rust python | nim
 
 ;; null-safe examples:
-scala | kotlin idris || erlang julia elixir ceylon
+scala rust | kotlin idris || ceylon julia erlang elixir
 
 ;; metaprogramming examples:
-nim | elixir julia lisp red
+nim | elixir julia lisp redbol
 
 ==/
 
@@ -60,7 +64,7 @@ nim | elixir julia lisp red
 ;; the living proof that easy and simple are not the same
 ;; maybe vulnerable to injection
 ;; homoiconic examples:
-any lisp, any rebol, julia
+any lisp, redbol, julia
 
 =/
 
@@ -83,8 +87,9 @@ the list
 python
 
 ;; 10.000 stars
-;; scala-native
-;; to leverage jvm completly
+;; scala-native.
+;; to leverage jvm completly.
+;; together with kotlin
 ;; OBJECT-FUNCTIONAL
 ;; ANDROID
 scala
@@ -101,28 +106,21 @@ kotlin
 ;;
 java
 
-;; 5.000 stars
-;; best low-level
-;; multiple gcs and backends
-;; interoperability with c
+;; 30.000 stars
+;; teaches to program
+;; flagman of ownership/borrowing
+;; null-safe
 ;; webassembly
-;; is low-high
-;; ast
-;; will help with c, c++, obj-c, javascript
-;; min, spry
-;; conjuction with haskell
-nim
+;; NO METAPROGRAMMING
+rust dyon gluon (1)
 
 ======
 tier 2
 ======
 
-;; optional braces as delimiters.
-;; thankfully not generally used.
-;; conjuction with nim
-;; will keep me liking nim
-;; much better than c, c++, javascript
 ;; laziness is awesome
+;; brackets as block delimiters.
+;; thankfully not genereally used
 haskell
 
 ======
@@ -144,20 +142,18 @@ purescript
 under supervision
 =================
 
-;; 30.000 stars
-;; teaches to program
-;; flagman of ownership/borrowing
-;; null-safe
-;; webassembly
-;; NO METAPROGRAMMING
-rust dyon gluon (1)
+d/lang
 
-============
-practicality
-popularity
-stability 
-check
-============
+;; 5.000 stars
+;; multiple gcs and backends
+;; interoperability with c
+;; webassembly
+;; is low-high
+;; ast
+;; will help with c, c++, obj-c, javascript
+;; min, spry
+;; because it's a transpiler to c and friends
+nim
 
 ================
 learn the basics
@@ -165,12 +161,12 @@ learn the basics
 
 ;; it's a minimal language
 javascript (scala, kotlin, python, nim, idris)
-c++ (nim)
+c++ (rust, nim)
 
 java (kotlin, scala, nim, idris)
 csharp (idris)
 
-c (nim)
+c (rust, nim)
 
 ========
 research
