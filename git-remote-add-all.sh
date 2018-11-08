@@ -1,1 +1,1 @@
-git remote add all ../dokumento-md.git
+git remote set-url --add --push all https://github.com/i4get2code/dokumento-md.git
