@@ -4,6 +4,6 @@
 S="$( cd "$( dirname "${BASH_SOURCE[0]}" )" && pwd )"
 cd $S # necessary
 
-if [ -d ../dokumento-md.git ]; then
-    git push all master
+if [ -d ../dokumento-mu.git ]; then
+    git push on master
 fi
