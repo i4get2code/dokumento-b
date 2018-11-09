@@ -1,1 +1,1 @@
-git init --bare ../dokumento-md.git
+git init --bare ../gits/dokumento-md.git

@@ -1,3 +1,3 @@
-git remote add on ../dokumento-mu.git
-git remote add off ../dokumento-mu.git
+git remote add on ../gits/dokumento-mu.git
+git remote add off ../gits/dokumento-mu.git
 
