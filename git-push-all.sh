@@ -8,7 +8,5 @@ cd $S # necessary
 F="offline"
 N="online"
 
-git remote rm $F
-git remote rm $N
-
-echo "remote repos deleted"
+git push $N master
+git push $F master

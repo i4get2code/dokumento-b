@@ -3,12 +3,15 @@
 S="$( cd "$( dirname "${BASH_SOURCE[0]}" )" && pwd )"
 cd $S # necessary
 
+# B signifas baza / base
+# D signifas directory
+# P signifas path
 # F signifas offline
-# N signifas online
+B="$(basename $(pwd))"
+D="$B.git"
+P="../gits"
 F="offline"
-N="online"
 
-git remote rm $F
-git remote rm $N
-
-echo "remote repos deleted"
+if [ -d $P/$D ]; then
+    git push $F master
+fi
